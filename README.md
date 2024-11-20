@@ -9,7 +9,6 @@ This Python script automates the creation of DNS zones and DNS records on a Tech
 - **Logging:** All actions and errors are logged for easier debugging.
 - **Command-Line Options:** Flexible configuration via command-line arguments.
 
----
 
 ## Prerequisites
 1. A Technitium DNS server running and accessible via HTTP.
@@ -20,13 +19,13 @@ This Python script automates the creation of DNS zones and DNS records on a Tech
    pip install requests
    ```
 
----
+
 
 ## Usage
 ### Generate API Token
 Before running the script, generate an API token manually using the Technitium DNS Web UI or API.
 
----
+
 
 ### Command-Line Options
 The script accepts the following command-line arguments:
@@ -37,7 +36,7 @@ The script accepts the following command-line arguments:
 | `zones`       | List of zones to create.                                                                    | Yes      | None              |
 | `--csv`       | Path to the CSV file containing DNS records.                                                | No       | `dns_records.csv` |
 
----
+
 
 ### Example Command
 ```bash
@@ -65,48 +64,17 @@ api.jkt03-ocp01.btest.io,btest.io,A,192.168.10.9,3600,true,
 api-int.jkt03-ocp01.btest.io,btest.io,CNAME,,3600,false,api.jkt03-ocp01.btest.io
 ```
 
----
+
 
 ## How It Works
 1. **Create Zones:** The script first creates all specified zones using the API.
 2. **Add Records:** It processes the CSV file and adds DNS records (A and CNAME) to the respective zones.
 3. **Error Handling:** Errors during zone or record creation are logged but do not stop the execution.
 
----
+
 
 ## Logs
 All actions and errors are logged in `dns_management.log`. This log includes:
 - Successful zone creation.
 - Successful DNS record addition.
 - Errors encountered during API requests.
-
----
-
-## Troubleshooting
-### No Output or Records Added
-1. Ensure the Technitium server is accessible via the specified URL.
-2. Verify that the API token is valid and not expired.
-3. Check the log file `dns_management.log` for any error messages.
-
-### Example Errors
-- **Invalid Token:** Ensure the `--token` value is correct.
-- **HTTP Errors:** Verify the Technitium server URL is reachable.
-
----
-
-## Contributing
-If you'd like to contribute to this project, feel free to fork the repository, make your changes, and submit a pull request.
-
----
-
-## License
-This project is licensed under the MIT License.
-
----
-
-## Acknowledgments
-Thanks to the Technitium DNS team for providing a powerful and extensible DNS solution.
-
----
-
-Save this content into a file named `README.md` in your GitHub repository. It provides a clear and comprehensive guide for users to set up and use the script effectively.
