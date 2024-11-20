@@ -40,7 +40,7 @@ The script accepts the following command-line arguments:
 
 ### Example Command
 ```bash
-python3 setdns.py --token <your-token> btest.io 10.25.10.in-addr.arpa --csv dns_records.csv
+python3 setdns.py --token <your-token> btest.io 10.168.192.in-addr.arpa 11.168.192.in-addr.arpa --csv dns_records.csv
 ```
 
 ### Example CSV File
