@@ -35,6 +35,8 @@ The script accepts the following command-line arguments:
 | `--token`     | API token for Technitium DNS Server.                                                        | Yes      | None              |
 | `zones`       | List of zones to create.                                                                    | Yes      | None              |
 | `--csv`       | Path to the CSV file containing DNS records.                                                | No       | `dns_records.csv` |
+| `--server`   | URL Technitium DNS Server (e.g., `http://192.168.91.130:5380`). | Yes      | None              |
+
 
 
 
