@@ -1,5 +1,3 @@
----
-
 # Technitium DNS Management Script
 
 ## Overview
