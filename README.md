@@ -1,5 +1,3 @@
-Berikut adalah dokumentasi untuk script Anda, diformat untuk GitHub dalam file `README.md`:
-
 ---
 
 # Technitium DNS Management Script
